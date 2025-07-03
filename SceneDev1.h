@@ -1,13 +1,15 @@
 #pragma once
 #include "Scene.h"
-class SceneDev1 : public Scene
-{
-protected:
+class TextGo;
+class SceneDev1 : public Scene  
+{  
+protected:  
+	TextGo* testgo;
+	
+public:  
+	SceneDev1();  
 
-public:
-	SceneDev1();
-
-	void Init() override;
-	void Update(float dt) override;
+	void Init() override;  
+	void Update(float dt) override;  
 };
 

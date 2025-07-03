@@ -1,6 +1,11 @@
 #pragma once
 
 // Defines.h
+enum SortingLayers
+{
+	Default,
+
+};
 
 enum class Origins
 {

@@ -5,6 +5,8 @@ class GameObject
 protected:
 	std::string name;
 	bool active = true;
+	
+
 
 	sf::Vector2f position;
 	float rotation = 0.f;
@@ -14,6 +16,9 @@ protected:
 	Origins originPreset = Origins::TL;
 
 public:
+
+	SortingLayers sortingLayer = SortingLayers::Default;
+	int sortingOrder = 0;
 
 	GameObject(const std::string& name = "");
 	virtual ~GameObject();

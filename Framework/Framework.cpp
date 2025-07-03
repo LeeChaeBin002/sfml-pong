@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Framework.h"
+#include "InputMgr.h"
 
 void Framework::Init(int w, int h, const std::string& t)
 {
@@ -34,6 +35,10 @@ void Framework::Do()
                 window.close();
             InputMgr::UpdateEvent(event);
         }
+       
+        
+       
+
 
         InputMgr::Update(deltaTime);
 
