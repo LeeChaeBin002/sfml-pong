@@ -1,10 +1,8 @@
 #pragma once
 
-// Defines.h
-enum SortingLayers
+enum class SortingLayers
 {
 	Default,
-
 };
 
 enum class Origins
@@ -18,6 +16,8 @@ enum class Origins
 enum class SceneIds
 {
 	None = -1,
+	Title,
+	Game,
 	Dev1,
 	Dev2,
 	Count,

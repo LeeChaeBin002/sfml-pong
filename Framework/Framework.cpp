@@ -1,17 +1,14 @@
 #include "stdafx.h"
 #include "Framework.h"
-#include "InputMgr.h"
 
 void Framework::Init(int w, int h, const std::string& t)
 {
 	window.create(sf::VideoMode(w, h), t);
 
-    // texIds, fontIds, soundIds
-
 	TEXTURE_MGR.Load(texIds);
 	FONT_MGR.Load(fontIds);
 	SOUNDBUFFER_MGR.Load(soundIds);
-
+    //SCENE_MGR.ChangeScene;
     Utils::Init();
 	InputMgr::Init();
 	SCENE_MGR.Init();
@@ -35,10 +32,6 @@ void Framework::Do()
                 window.close();
             InputMgr::UpdateEvent(event);
         }
-       
-        
-       
-
 
         InputMgr::Update(deltaTime);
 
