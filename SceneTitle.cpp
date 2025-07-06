@@ -4,7 +4,9 @@
 SceneTitle::SceneTitle()
 	:Scene(SceneIds::Title)
 {
+	titleText = nullptr;
 	startText = nullptr;
+	
 }
 
 SceneTitle::~SceneTitle()
@@ -13,14 +15,21 @@ SceneTitle::~SceneTitle()
 }
 void SceneTitle::Init()
 {
-	startText = new UI("fonts/DS-DiGIT.TTF", "Start");
-	startText->SetPosition({ 640.f,360.f });
+	titleText = new UI("fonts/DS-DIGIT.TTF", "Ping!");
+	titleText->SetPosition({ 480.f,260.f });
+	titleText->SetCharSize(150);
+	startText = new UI("fonts/DS-DIGIT.TTF", "Click to Start");
+	startText->SetPosition({ 480.f,630.f });
+	startText->SetCharSize(50);
+	
 }
 void SceneTitle::Draw(sf::RenderWindow& window)
 {
 	if (startText)
 		startText->Draw(window);
 
+	if (titleText)
+		titleText->Draw(window);
 
 }
 void SceneTitle::Update(float dt)

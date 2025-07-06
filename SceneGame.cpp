@@ -16,8 +16,9 @@ void SceneGame::Init()
 	bat = (Bat*)AddGameObject(new Bat("Bat"));
 	ball = (Ball*)AddGameObject(new Ball("Ball"));
 	ball->SetBat(bat);
-	startButton = new UI("fonts/DS-DIGIT.TTF", "1234567890");
-	startButton->SetPosition({ 400,200 });
+	startButton = new UI("fonts/DS-DIGIT.TTF", "SCORE: ");
+	startButton->SetPosition({ 50,50 });
+	startButton->SetCharSize(50);
 	
 	uiElements.push_back(startButton);
 	Scene::Init();

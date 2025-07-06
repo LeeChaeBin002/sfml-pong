@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "SceneDev1.h"
 #include "TextGo.h"
+#include "UI.h"
+
+
+//UI* titleUl;
+//UI* scoreUI;
 
 SceneDev1::SceneDev1()
 	: Scene(SceneIds::Dev1)
@@ -8,19 +13,23 @@ SceneDev1::SceneDev1()
 }
 
 void SceneDev1::Init()
-{
-	fontIds.push_back("fonts/DS-DIGIT.ttf");
+{/*
+	fontIds.push_back("fonts/DS-DIGIT.TTF");
+	titleUl = new UI("fonts/DS-DIGIT.TTF", "Ping");
+	titleUl->SetPosition({ 450.f, 360.f });*/
 
-	TextGo* go = new TextGo("fonts/DS-DIGIT.ttf");
-	go->SetString("Dev 1");
-	go->SetCharacterSize(30);
-	go->SetFillColor(sf::Color::White);
-	AddGameObject(go);
 
-	testGo = new TextGo("fonts/DS-DIGIT.ttf");
+
+	//TextGo* go = new TextGo("fonts/DS-DIGIT.TTF");
+	//go->SetString("Dev 1");
+	//go->SetCharacterSize(30);
+	//go->SetFillColor(sf::Color::White);
+	//AddGameObject(go);
+
+	testGo = new TextGo("fonts/DS-DIGIT.TTF");
 	testGo->SetString("Dev 1");
 	testGo->SetCharacterSize(30);
-	testGo->SetFillColor(sf::Color::Red);
+	testGo->SetFillColor(sf::Color::White);
 	AddGameObject(testGo);
 
 	Scene::Init();

@@ -1,18 +1,18 @@
 #include "stdafx.h"
 #include "UI.h"
+#include <filesystem>
 
 UI::UI(const std::string& fontPath, const std::string& str)
 {
 	if (!font.loadFromFile(fontPath))
 	{
 		std::cout << "폰트 로딩 실패: " << fontPath << std::endl;
+		std::cout << "현재 작업 디렉터리: " << std::filesystem::current_path() << std::endl;
 	}
 	text.setFont(font);
-	text.setString(str);
-	text.setCharacterSize(50);              // 글자 크게
-	text.setFillColor(sf::Color::Red);      // 배경 대비 확실히
-	text.setOrigin(text.getLocalBounds().width / 2.f, text.getLocalBounds().height / 2.f);
-	text.setPosition(640.f, 360.f);         // 화면 중앙
+	text.setString(str); 
+	          
+	text.setFillColor(sf::Color::White);
 
 }
 
@@ -27,7 +27,7 @@ void UI::SetTexture(const std::string& textureId)
 }
 void UI::SetPosition(const sf::Vector2f& pos)
 {
-	sprite.setPosition(pos);
+	text.setPosition(pos);
 }
 void UI::Update(float dt)
 {
@@ -43,9 +43,15 @@ void UI::Draw(sf::RenderWindow& window)
 	window.draw(text);
 
 }
+
 void UI::HandleInput(const sf::Vector2f& mousePos, bool isClicked)
 {
 
+}
+
+void UI::SetCharSize(int size)
+{
+	text.setCharacterSize(size);
 }
 
 void UI::Init()
@@ -59,3 +65,4 @@ void UI::Release()
 void UI::Reset()
 {
 }
+

@@ -6,6 +6,8 @@ class SceneTitle :
 {
 protected:
     UI* startText = nullptr;
+    UI* titleText;
+   
 public:
     SceneTitle();
     ~SceneTitle()override;

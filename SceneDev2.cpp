@@ -9,9 +9,9 @@ SceneDev2::SceneDev2()
 
 void SceneDev2::Init()
 {
-	fontIds.push_back("fonts/DS-DIGIT.ttf");
+	fontIds.push_back("fonts/DS-DIGIT.TTF");
 
-	TextGo* go = new TextGo("fonts/DS-DIGIT.ttf");
+	TextGo* go = new TextGo("fonts/DS-DIGIT.TTF");
 	go->SetString("Dev 2");
 	go->SetCharacterSize(30);
 	go->SetFillColor(sf::Color::White);

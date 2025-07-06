@@ -15,6 +15,7 @@ protected:
 
 public:
 
+
 	SortingLayers sortingLayer = SortingLayers::Default;
 	int sortingOrder = 0;
 
